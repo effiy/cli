@@ -1,4 +1,16 @@
-# HTTPie on Snapcraft
+---
+title: "HTTPie on Snapcraft"
+tags: [httpie, packaging, snapcraft, snap, linux, macos]
+category: "packaging"
+created: "2024-01-01"
+updated: "2026-10-20"
+source: "external"
+type: "index"
+status: "stable"
+lifecycle: "active"
+---
+
+# 💡 概述
 
 Welcome to the documentation about **packaging HTTPie for Snapcraft**.
 
@@ -6,25 +18,48 @@ Welcome to the documentation about **packaging HTTPie for Snapcraft**.
 - If you are looking for HTTPie installation or upgrade instructions on Snapcraft, then you can find them on [that page](https://httpie.io/docs#snapcraft-linux) ([that one](https://httpie.io/docs#snapcraft-macos) for macOS).
 - If you are looking for technical information about the HTTPie packaging on Snapcraft, then you are in a good place.
 
-## About
+This document contains technical details, where we describe how to create a patch for the latest HTTPie version for Snapcraft. They apply to Snapcraft on Linux, macOS, and Windows. We will discuss setting up the environment, installing development tools, installing and testing changes before submitting a patch downstream.
 
-This document contains technical details, where we describe how to create a patch for the latest HTTPie version for Snapcraft. They apply to Snapcraft on Linux, macOS, and Windows.
-We will discuss setting up the environment, installing development tools, installing and testing changes before submitting a patch downstream.
+---
 
-## Overall process
+## ⚡ 功能
 
-Trigger the [`Release on Snap`](https://github.com/httpie/cli/actions/workflows/release-snap.yml) action, which will
-create a snap package for HTTPie and then push it to Snap Store in the following channels:
+Trigger the [`Release on Snap`](https://github.com/httpie/cli/actions/workflows/release-snap.yml) action, which will create a snap package for HTTPie and then push it to Snap Store in the following channels:
 
 - Edge
 - Beta
 - Candidate
 - Stable
 
-If a push to any of them fail, all the release tasks for the following channels will be cancelled so that the
-release manager can look into the underlying cause.
+If a push to any of them fail, all the release tasks for the following channels will be cancelled so that the release manager can look into the underlying cause.
 
-## Hacking
+---
+
+## 📊 指标
+
+「待补充」
+
+---
+
+## 🏛️ 设计
+
+「待补充」
+
+---
+
+## 📁 目录
+
+「待补充」
+
+---
+
+## 🔗 资源
+
+- [`Release on Snap` action](https://github.com/httpie/cli/actions/workflows/release-snap.yml)
+
+---
+
+## 🚀 快速开始
 
 Launch the docker image:
 
@@ -58,3 +93,11 @@ httpie.https --version
 # Remove
 sudo snap remove httpie
 ```
+
+---
+
+## ⚙️ 技术栈
+
+- Snapcraft
+- Docker
+- GitHub Actions
